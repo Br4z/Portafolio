@@ -7,12 +7,10 @@ const App = () => {
 	return (
 		<>
 			<Info
-				name="Brandon Calderon Prieto"
+				name="Brandon Calderón Prieto"
 				biography="Arch Linux user"
 			/>
-			<Canvas
-				//camera={{ position: [1, 0, 5] }}
-			>
+			<Canvas>
 				<Experience />
 			</Canvas>
 		</>
