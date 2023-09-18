@@ -7,8 +7,8 @@ const App = () => {
 	return (
 		<>
 			<Info
-				name="Brandon Calderón Prieto"
-				biography="Arch Linux user"
+				name='Brandon Calderón Prieto'
+				biography='Arch Linux user'
 			/>
 			<Canvas>
 				<Experience />
