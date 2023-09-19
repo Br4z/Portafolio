@@ -10,7 +10,9 @@ const App = () => {
 				name='Brandon Calderón Prieto'
 				biography='Arch Linux user'
 			/>
-			<Canvas>
+			<Canvas
+				shadows
+			>
 				<Experience />
 			</Canvas>
 		</>
