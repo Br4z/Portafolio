@@ -23,6 +23,7 @@ export function ArchChan(props) {
 								<group name="GLTF_created_0">
 									<primitive object={nodes.GLTF_created_0_rootJoint} />
 									<skinnedMesh
+										castShadow
 										name="Object_7"
 										geometry={nodes.Object_7.geometry}
 										material={materials["Material.005"]}

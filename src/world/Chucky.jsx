@@ -41,6 +41,7 @@ const Chucky = (props) => {
 									<group name="Object_7">
 										<primitive object={nodes._rootJoint} />
 										<skinnedMesh
+											castShadow
 											name="Object_10"
 											geometry={nodes.Object_10.geometry}
 											material={materials.ChuckyBody_mat}
@@ -53,6 +54,7 @@ const Chucky = (props) => {
 											}
 										/>
 										<skinnedMesh
+											castShadow
 											name="Object_11"
 											geometry={nodes.Object_11.geometry}
 											material={materials.ChuckyHair_mat}
@@ -65,6 +67,7 @@ const Chucky = (props) => {
 											}
 										/>
 										<skinnedMesh
+											castShadow
 											name="Object_13"
 											geometry={nodes.Object_13.geometry}
 											material={materials.gray}

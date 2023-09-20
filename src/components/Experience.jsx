@@ -1,17 +1,20 @@
 import { OrbitControls } from '@react-three/drei'
+import Environments from '../world/Environments'
+import Lights from '../world/Lights'
 import Chucky from '../world/Chucky'
 import ArchChan from '../world/ArchChan'
-import Floor from './Floor'
+import Room from './Room'
+
 
 const Experience = () => {
 	return (
 		<>
-			<ambientLight intensity={0.5} />
-			<directionalLight position={[10, 10, 5]} intensity={2} />
 			<OrbitControls makeDefault />
-			<Chucky position={[3, -2, 1]} rotation-y={-Math.PI / 4}  scale={0.005} />
+			<Environments />
+			<Lights />
+			<Chucky position={[3, -2, 1]} rotation-y={-Math.PI / 4} scale={0.005} />
 			<ArchChan position={[0, -2, 0]} scale={3} />
-			<Floor />
+			<Room side={12} />
 		</>
 	)
 }
