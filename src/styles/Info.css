@@ -8,6 +8,7 @@
 	position: absolute;
 	z-index: 1;
 	padding: 0rem 8rem;
+	user-select: none;
 }
 
 .card-info {
