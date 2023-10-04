@@ -13,9 +13,16 @@ const Chucky = (props) => {
 		action.play()
 	}, [])
 
+	const handleSign = (e, type) => {
+		if (type == 'Chucky body') {
+			const action = actions['Armature|Chucky_ATTACK-KNIFE-01']
+			action.play()
+		}
+	}
+
 	return (
 		<group ref={chuckyRef} {...props} dispose={null}>
-			<group name="Sketchfab_Scene">
+			<group name="Sketchfab_Scene" scale={0.005}>
 				<group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, -0.528]}>
 					<group
 						name="ba44ef469c7a474589552e1d5676d8e7fbx"
@@ -41,6 +48,7 @@ const Chucky = (props) => {
 									<group name="Object_7">
 										<primitive object={nodes._rootJoint} />
 										<skinnedMesh
+											onClick={(e) => { handleSign(e, 'Chucky body') }}
 											castShadow
 											name="Object_10"
 											geometry={nodes.Object_10.geometry}
@@ -54,6 +62,7 @@ const Chucky = (props) => {
 											}
 										/>
 										<skinnedMesh
+
 											castShadow
 											name="Object_11"
 											geometry={nodes.Object_11.geometry}
@@ -90,6 +99,7 @@ const Chucky = (props) => {
 					</group>
 				</group>
 			</group>
+			{props.children}
 		</group>
 	)
 }

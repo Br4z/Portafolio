@@ -11,7 +11,7 @@ const Environments = () => {
 				saturation={0} // Saturation 0-1 (default=0)
 			/>
 			<Sparkles
-				color='rose'
+				color='white'
 				count={100}
 				size={4}
 				fade={false}

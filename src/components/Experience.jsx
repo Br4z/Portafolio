@@ -4,16 +4,24 @@ import Lights from '../world/Lights'
 import Chucky from '../world/Chucky'
 import ArchChan from '../world/ArchChan'
 import Room from './Room'
+import Sign from '../world/Sign'
+import WelcomeText from '../world/WelcomeText'
+import ChuckyText from '../world/ChuckyText'
 
 
 const Experience = () => {
 	return (
 		<>
-			<OrbitControls makeDefault />
+			<OrbitControls makeDefault target={[0, 1.5, 0]} />
 			<Environments />
 			<Lights />
-			<Chucky position={[3, -2, 1]} rotation-y={-Math.PI / 4} scale={0.005} />
-			<ArchChan position={[0, -2, 0]} scale={3} />
+			<Sign position={[0, 0, 0]} scale={1.5}>
+				<WelcomeText />
+			</Sign>
+			<Chucky position={[3, 0, 1]} rotation-y={-Math.PI / 4} >
+				<ChuckyText />
+			</ Chucky >
+			<ArchChan position={[-2, 0, -1]} scale={3} />
 			<Room side={12} />
 		</>
 	)

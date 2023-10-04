@@ -30,12 +30,12 @@ const Lights = () => {
 			/>
 			<spotLight
 				ref={spotLightRef}
-				position={[0, 5, 2]}
+				position={[0, 8, 2]}
 				angle={Math.PI / 12}
 				intensity={100}
 				penumbra={1}
 				color={'#5F87AF'}
-				distance={9}
+				distance={12}
 			/>
 		</>
 	)
