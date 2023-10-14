@@ -1,23 +1,17 @@
 import { Suspense } from 'react'
 import { OrbitControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
-import Environments from '../world/Environments'
-import Lights from '../world/Lights'
-import Bee from '../world/Bee'
-import Tree from '../world/Tree'
-import WoodenFence from '../world/WoodenFence'
-import Floor from '../world/Floor'
-import Sign from '../world/Sign'
-import WelcomeText from '../world/WelcomeText'
+import Bee from './models/Bee'
+import Tree from './models/Tree'
+import WoodenFence from './models/WoodenFence'
+import Floor from './models/Floor'
+import Sign from './models/Sign'
+import WelcomeText from './text/WelcomeText'
 
 
-const Experience = () => {
+const Welcome = () => {
 	return (
 		<>
-			<Perf />
-			<OrbitControls target={[0, 1.5, 0]} />
-			<Lights />
-			<Environments />
 			<Suspense fallback={null}>
 				<Bee position={[2, 2, 0]} scale={1.5} />
 				<Tree position={[-2, 0, 2]} scale={0.04} />
@@ -33,4 +27,4 @@ const Experience = () => {
 	)
 }
 
-export default Experience
+export default Welcome
