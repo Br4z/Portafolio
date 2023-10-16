@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react"
-import { useGLTF } from "@react-three/drei"
-import { useFrame, useThree } from "@react-three/fiber"
-import { MathUtils } from "three"
+import React, { useRef, useState } from 'react'
+import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { MathUtils } from 'three'
 
 
 export function Sign(props) {
@@ -10,8 +10,8 @@ export function Sign(props) {
 	const [active, setActive] = useState(false)
 
 	useFrame((state) => {
-		state.camera.position.x = MathUtils.lerp(state.camera.position.x, active ? 15 : 0, 0.1)
-		state.camera.position.z = MathUtils.lerp(state.camera.position.z, active ? -6 : 5, 0.1)
+		state.camera.position.x = MathUtils.lerp(state.camera.position.x, active ? 15 : 0, 0.01)
+		state.camera.position.z = MathUtils.lerp(state.camera.position.z, active ? -6 : 5, 0.01)
 	})
 
 	return (

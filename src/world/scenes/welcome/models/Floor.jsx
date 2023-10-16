@@ -1,5 +1,6 @@
 import { useTexture } from '@react-three/drei'
 import { RepeatWrapping, Vector2 } from 'three'
+import { RigidBody } from '@react-three/rapier';
 
 const Floor = (props) => {
 	const PATH = '/assets/textures/forest/'
@@ -26,10 +27,12 @@ const Floor = (props) => {
 	propsTexture.map.offset = propsTexture.normalMap.offset = propsTexture.displacementMap.offset = propsTexture.roughnessMap.offset = propsTexture.aoMap.offset = new Vector2(0.5, 0.5)
 
 	return (
-		<mesh {...props}>
-			<planeGeometry args={[64, 64, 96, 96]} />
-			<meshStandardMaterial {...propsTexture} />
-		</mesh>
+		<RigidBody type='fixed'>
+			<mesh {...props}>
+				<planeGeometry args={[64, 64, 96, 96]} />
+				<meshStandardMaterial {...propsTexture} />
+			</mesh>
+		</RigidBody>
 	)
 }
 

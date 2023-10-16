@@ -1,7 +1,6 @@
-import { Suspense } from 'react'
-// import { Physics } from "@react-three/rapier";
-import Controls from './controls/Controls'
+import { Physics } from '@react-three/rapier';
 import { Perf } from 'r3f-perf'
+import Controls from './controls/Controls'
 import Environments from './staging/Environments'
 import Lights from './staging/Lights'
 import Welcome from './scenes/welcome/Welcome'
@@ -13,10 +12,12 @@ const Experience = () => {
 		<>
 			<Perf />
 			<Controls />
-			<Lights />
 			<Environments />
-			<Welcome />
-			<AboutMe />
+			<Lights />
+			<Physics debug>
+				<Welcome />
+				<AboutMe />
+			</Physics>
 		</>
 	)
 }

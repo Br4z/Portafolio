@@ -4,6 +4,11 @@ import Info from './components/Info'
 
 
 const App = () => {
+	const cameraSettings = {
+		position: [0, 2, 5],
+		fov: 60
+	}
+
 	return (
 		<>
 			<Info
@@ -12,6 +17,7 @@ const App = () => {
 			/>
 			<Canvas
 				shadows
+				camera={cameraSettings}
 			>
 				<Experience />
 			</Canvas>

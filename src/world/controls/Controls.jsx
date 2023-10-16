@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei"
+import { OrbitControls } from '@react-three/drei'
 
 const Controls = () => {
 	return (

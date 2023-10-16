@@ -1,6 +1,4 @@
 import { Center, Float, Html, Text, Text3D } from '@react-three/drei'
-import { useEffect } from 'react'
-import { Color } from 'three'
 
 
 const WelcomeText = () => {
@@ -11,7 +9,6 @@ const WelcomeText = () => {
 		//     <h2 className='welcome-text'>Welcome</h2>
 		// </Html>
 
-
 		// <Float speed={2}>
 		//     <Text
 		//         font='/assets/fonts/Bangers-Regular.ttf'
@@ -21,7 +18,6 @@ const WelcomeText = () => {
 		//         maxWidth={2}
 		//         textAlign='center'
 		//     >
-
 		//     </Text>
 		// </Float>
 
