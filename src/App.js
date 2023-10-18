@@ -1,11 +1,11 @@
 import { Canvas } from '@react-three/fiber'
-import Experience from './components/Experience'
+import Experience from './world/Experience'
 import Info from './components/Info'
 
 
 const App = () => {
 	const cameraSettings = {
-		position: [0, 5, 8],
+		position: [0, 2, 8],
 		fov: 60
 	}
 

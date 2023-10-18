@@ -1,16 +1,9 @@
-import { useHelper } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import { DirectionalLightHelper, PointLightHelper, SpotLightHelper } from 'three'
+
 
 const Lights = () => {
 	const directionalLightRef = useRef()
 	const spotLightRef = useRef()
-	const pointLightRef = useRef()
-
-	useHelper(directionalLightRef, DirectionalLightHelper)
-	useHelper(spotLightRef, SpotLightHelper)
-	useHelper(pointLightRef, PointLightHelper)
 
 	return (
 		<>

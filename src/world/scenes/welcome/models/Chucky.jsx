@@ -1,5 +1,5 @@
 import { useAnimations, useGLTF} from '@react-three/drei'
-import { useEffect, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 
 const Chucky = (props) => {
@@ -15,8 +15,16 @@ const Chucky = (props) => {
 
 	const handleSign = (e, type) => {
 		if (type == 'Chucky body') {
-			const action = actions['Armature|Chucky_ATTACK-KNIFE-01']
-			action.play()
+			const walking = actions['Armature|Chucky_WALK_FORWARD']
+			const attacking = actions['Armature|Chucky_ATTACK-KNIFE-01']
+
+			if (walking.isRunning()) {
+				walking.stop()
+				attacking.play()
+			} else {
+				attacking.stop()
+				walking.play()
+			}
 		}
 	}
 
